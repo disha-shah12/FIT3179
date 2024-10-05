@@ -1,0 +1,65 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "width": 620,
+    "height": 420,
+    "title": "Percentage of area burned during 2019-20 bushfires",
+    "projection": {"type": "mercator"},
+    "layer": [
+      {
+        "data": {
+          "url": "https://raw.githubusercontent.com/disha-shah12/FIT3179/refs/heads/main/LGA_2021_AUST_GDA2020.json",
+          "format": {"type": "topojson", "feature": "LGA_2021_AUST_GDA2020"}
+        },
+        "mark": {"type": "geoshape", "fill": "lightgray", "stroke": "white"},
+        "encoding": {
+          "tooltip": [
+            {
+              "field": "properties.LGA_NAME21",
+              "type": "nominal",
+              "title": "LGA"
+            }
+          ]
+        }
+      },
+      {
+        "data": {
+          "url": "https://raw.githubusercontent.com/disha-shah12/FIT3179/refs/heads/main/LGA_2021_AUST_GDA2020.json",
+          "format": {"type": "topojson", "feature": "LGA_2021_AUST_GDA2020"}
+        },
+        "transform": [
+          {
+            "lookup": "properties.LGA_NAME21",
+            "from": {
+              "data": {
+                "url": "https://raw.githubusercontent.com/disha-shah12/FIT3179/refs/heads/main/area_burned.csv"
+              },
+              "key": "LGA",
+              "fields": ["LGA", "Burned"]
+            }
+          }
+        ],
+        "mark": {"type": "geoshape"},
+        "encoding": {
+          "color": {
+            "field": "Burned",
+            "type": "quantitative",
+            "scale": {"scheme": "reds"},
+            "title": "% of area burned"
+          },
+          "tooltip": [
+            {
+              "field": "properties.LGA_NAME21",
+              "type": "nominal",
+              "title": "LGA"
+            },
+            {
+              "field": "Burned",
+              "type": "quantitative",
+              "title": "% of area burned"
+            }
+          ]
+        }
+      }
+    ]
+  }
+  
