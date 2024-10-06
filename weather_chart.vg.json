@@ -1,0 +1,113 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "width": 600,
+    "height": 400,
+    "title": "Average Weather in Eurodoballa",
+    "data": {
+      "url": "https://raw.githubusercontent.com/disha-shah12/FIT3179/refs/heads/main/avg_weather_eurodoballa.csv"
+      },
+    "params":[
+      {
+        "name":"weather_selection",
+        "bind":{
+          "input":"select",
+          "options":[
+            "Rainfall",
+            "Temperature"
+          ],
+          "labels":[
+            "Rainfall",
+            "Temperature"
+          ],
+          "name": "Average:"
+        },
+        "value":"Rainfall"
+      }
+    ],
+    "transform":[
+      {
+        "filter": "datum.avg_weather_category == weather_selection"
+      }
+    ],
+    "encoding": {
+      "x":{
+        "field":"Year",
+        "type":"nominal",
+        "title": "Year"
+      },
+      "y":{
+        "field":"avg_weather_value",
+        "type":"quantitative",
+        "title": "Average"
+      },
+      "color":{
+        "field": "avg_weather_category",
+        "type": "nominal",
+        "legend": null
+      },
+      "tooltip":[
+        {"field": "Year", "type": "nominal", "title": "Year"},
+        {"field": "avg_weather_category","type": "nominal","title": "Measure"},
+        {"field": "avg_weather_value", "type":"quantitative", "title":"Average"}
+      ]
+    },
+    "layer":[
+      {
+        "mark":"bar"
+      },
+      {
+        "mark":{
+          "type": "text",
+          "align": "right",
+          "baseline": "top",
+          "dx": -5,
+          "fontSize": 12
+        },
+        "encoding":{
+          "text":{"value":"2019 saw some of the lowest rainfall in Eurodoballa"},
+          "x":{
+            "value":575
+          },
+          "y":{
+            "value":50
+          },
+          "color":{"value":"black"},
+          "opacity":{
+            "condition":{
+              "test":"weather_selection==='Rainfall'",
+              "value":1
+            },
+            "value":0
+          }
+        }
+      },
+        {
+        "mark":{
+          "type": "text",
+          "align": "right",
+          "baseline": "top",
+          "dx": -5,
+          "fontSize": 12
+        },
+        "encoding":{
+          "text":{"value":"2019 was Australia's hottest year on record"},
+          "x":{
+            "value":575
+          },
+          "y":{
+            "value":10
+          },
+          "color":{"value":"black"},
+          "opacity":{
+            "condition":{
+              "test":"weather_selection==='Temperature'",
+              "value":1
+            },
+            "value":0
+          }
+        }
+      }
+  
+    ]
+  }
+  
