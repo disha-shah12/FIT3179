@@ -1,0 +1,61 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "width": 600,
+    "height": 400,
+    "title": "Annual Rainfall in Australia",
+    "data": {
+      "url": "https://raw.githubusercontent.com/disha-shah12/FIT3179/refs/heads/main/annual_rainfall_aus.csv"
+      },
+    "layer":[
+      {
+        "mark":"bar",
+        "encoding": {
+      "x":{
+        "field":"Year",
+        "type":"temporal",
+        "title": "Year",
+        "axis": {"tickCount": 10}
+      },
+      "y":{
+        "field":"Rainfall",
+        "type":"quantitative",
+        "title": "Annual Rainfall (mm)"
+      },
+      "tooltip":[
+        {"field": "Year", "type": "temporal", "title": "Year", "format":"%Y"},
+        {"field": "Rainfall","type": "quantitative","title": "Rainfall (mm)"}
+      ]
+        }
+      },
+      {
+        "mark":{
+          "type":"line",
+          "color":"black",
+          "point":"transparent"
+        },
+        "encoding":{
+          "x":{
+            "field":"Year", 
+            "type":"temporal",
+            "axis": {"tickCount": 10}
+          },
+          "y":{
+            "field":"11_year_avg", "type":"quantitative"
+          },
+          "tooltip":[
+            {"field": "Year", "type": "temporal", "title": "Year", "format":"%Y"},
+            {"field": "11_year_avg","type": "quantitative","title": "11 year average rainfall (mm)"}
+          ]
+        }
+      },
+        {
+        "mark":{
+          "type": "text",
+          "align": "right",
+          "baseline": "top",
+          "dx": -5,
+          "fontSize": 12
+        }
+      }
+    ]
+  }
