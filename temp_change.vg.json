@@ -1,0 +1,80 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "width": 600,
+    "height": 400,
+    "title": "Temperature Change in Australia (from 1961-90 average)",
+    "data": {
+      "url": "https://raw.githubusercontent.com/disha-shah12/FIT3179/refs/heads/main/annual_temp_difference_aus.csv"
+      },
+    "layer":[
+      {
+        "mark":"bar",
+        "encoding": {
+      "x":{
+        "field":"Year",
+        "type":"temporal",
+        "title": "Year",
+        "axis": {"tickCount": 10}
+      },
+      "y":{
+        "field":"temp_diff",
+        "type":"quantitative",
+        "title": "Temperature Difference (°C)"
+      },
+      "color":{
+        "condition":{
+          "test":"datum.temp_diff>0",
+          "value":"#ff2c2c"
+        },
+        "value":"#1E90FF"
+      },
+      "tooltip":[
+        {"field": "Year", "type": "temporal", "title": "Year", "format":"%Y"},
+        {"field": "temp_diff","type": "quantitative","title": "Temperature Difference (°C)"}
+      ]
+        }
+      },
+      {
+        "mark":{
+          "type":"line",
+          "color":"black",
+          "point":"transparent"
+        },
+        "encoding":{
+          "x":{
+            "field":"Year", 
+            "type":"temporal",
+            "axis": {"tickCount": 10}
+          },
+          "y":{
+            "field":"11_year_mean", "type":"quantitative"
+          },
+          "tooltip":[
+            {"field": "Year", "type": "temporal", "title": "Year", "format":"%Y"},
+            {"field": "11_year_mean","type": "quantitative","title": "11 year average temperature difference (°C)"}
+          ]
+        }
+      },
+        {
+        "mark":{
+          "type": "text",
+          "align": "right",
+          "baseline": "top",
+          "dx": -5,
+          "fontSize": 12
+        },
+        "encoding":{
+          "text":{"value":"2019 was Australia's hottest year on record, \n 1.52°C above the 1961-1990 average"},
+          "x":{
+            "value":575
+          },
+          "y":{
+            "value":10
+          },
+          "color":{"value":"gray"}
+        }
+      }
+  
+    ]
+  }
+  
