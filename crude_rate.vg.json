@@ -1,0 +1,78 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "width": 600,
+    "height": 400,
+    "title": "Comparison of crude rate for emergency department visits during bushfire seasons ",
+    "data": {
+      "url": "https://raw.githubusercontent.com/disha-shah12/FIT3179/refs/heads/main/crude_rate.csv"
+      },
+    "params":[
+      {
+        "name":"state_selection",
+        "bind":{
+          "input":"select",
+          "options":[
+            "New South Wales",
+            "Victoria",
+            "Queensland",
+            "Australian Capital Territory",
+            "South Australia",
+            "Western Australia",
+            "Tasmania",
+            "Northern Territory"
+          ],
+          "labels":[
+            "New South Wales",
+            "Victoria",
+            "Queensland",
+            "Australian Capital Territory",
+            "South Australia",
+            "Western Australia",
+            "Tasmania",
+            "Northern Territory"
+          ],
+          "name": "State:"
+        },
+        "value":"New South Wales"
+      }
+    ],
+    "transform":[
+      {
+        "filter": "datum.State == state_selection"
+      }
+    ],
+    "encoding": {
+      "x":{
+        "field":"principal_diagnosis",
+        "type":"nominal",
+        "title": "Health Condition",
+        "axis":{"labelAngle":0}
+      },
+      "y":{
+        "field":"crude_rate",
+        "type":"quantitative",
+        "title": "Crude Rate (per 100,000 people)"
+      },
+      "color":{
+        "field": "Year",
+        "type": "nominal",
+        "legend": {
+          "title":"Bushfire Season"
+        }
+      },
+      "xOffset": {
+        "field":"Year"
+      },
+      "tooltip":[
+        {"field": "principal_diagnosis", "type": "nominal", "title": "Health Condition"},
+        {"field": "Year","type": "nominal","title": "Bushfire Season"},
+        {"field": "crude_rate", "type":"quantitative", "title":"Crude Rate"}
+      ]
+    },
+    "layer":[
+      {
+        "mark":"bar"
+      }
+    ]
+  }
+  
