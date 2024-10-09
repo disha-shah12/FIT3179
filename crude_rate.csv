@@ -1,81 +1,81 @@
 ﻿State,principal_diagnosis,Year,crude_rate
-New South Wales,Respiratiry Conditions,2018-19,42.743461
-Victoria,Respiratiry Conditions,2018-19,31.646456
-Queensland,Respiratiry Conditions,2018-19,39.964675
-South Australia,Respiratiry Conditions,2018-19,31.960344
-Western Australia,Respiratiry Conditions,2018-19,42.171306
-Tasmania,Respiratiry Conditions,2018-19,38.61457
-Northern Territory,Respiratiry Conditions,2018-19,144.09572
-Australian Capital Territory,Respiratiry Conditions,2018-19,40.201818
-New South Wales,Respiratiry Conditions,2019-20,52.044055
-Victoria,Respiratiry Conditions,2019-20,35.274251
-Queensland,Respiratiry Conditions,2019-20,38.909406
-South Australia,Respiratiry Conditions,2019-20,41.707533
-Western Australia,Respiratiry Conditions,2019-20,41.551368
-Tasmania,Respiratiry Conditions,2019-20,44.521349
-Northern Territory,Respiratiry Conditions,2019-20,134.47468
-Australian Capital Territory,Respiratiry Conditions,2019-20,45.744044
-New South Wales,Asthma,2018-19,4.7618045
-Victoria,Asthma,2018-19,4.0699354
-Queensland,Asthma,2018-19,2.874582
-South Australia,Asthma,2018-19,4.5493102
-Western Australia,Asthma,2018-19,3.5463987
-Tasmania,Asthma,2018-19,2.4607324
-Northern Territory,Asthma,2018-19,8.0952651
-Australian Capital Territory,Asthma,2018-19,4.9954922
-New South Wales,Asthma,2019-20,6.9985591
-Victoria,Asthma,2019-20,5.6845054
-Queensland,Asthma,2019-20,3.1410217
-South Australia,Asthma,2019-20,4.2791586
-Western Australia,Asthma,2019-20,3.8501726
-Tasmania,Asthma,2019-20,6.1731282
-Northern Territory,Asthma,2019-20,9.7504296
-Australian Capital Territory,Asthma,2019-20,10.087148
-New South Wales,Breathing abnormalities,2018-19,8.0950677
-Victoria,Breathing abnormalities,2018-19,5.5864893
-Queensland,Breathing abnormalities,2018-19,3.7728889
-South Australia,Breathing abnormalities,2018-19,3.8006895
-Western Australia,Breathing abnormalities,2018-19,4.6642852
-Tasmania,Breathing abnormalities,2018-19,2.6500195
-Northern Territory,Breathing abnormalities,2018-19,7.2857386
-Australian Capital Territory,Breathing abnormalities,2018-19,3.0924475
-New South Wales,Breathing abnormalities,2019-20,9.3355338
-Victoria,Breathing abnormalities,2019-20,5.8512509
-Queensland,Breathing abnormalities,2019-20,4.3974303
-South Australia,Breathing abnormalities,2019-20,4.1650477
-Western Australia,Breathing abnormalities,2019-20,4.9937883
-Tasmania,Breathing abnormalities,2019-20,2.4318384
-Northern Territory,Breathing abnormalities,2019-20,12.188037
-Australian Capital Territory,Breathing abnormalities,2019-20,3.049603
-New South Wales,Chest pain,2018-19,30.036962
-Victoria,Chest pain,2018-19,25.177889
-Queensland,Chest pain,2018-19,17.187605
-South Australia,Chest pain,2018-19,27.180689
-Western Australia,Chest pain,2018-19,23.167235
-Tasmania,Chest pain,2018-19,25.364472
-Northern Territory,Chest pain,2018-19,51.00017
-Australian Capital Territory,Chest pain,2018-19,33.779042
-New South Wales,Chest pain,2019-20,27.610923
-Victoria,Chest pain,2019-20,24.299366
-Queensland,Chest pain,2019-20,20.770006
-South Australia,Chest pain,2019-20,24.134455
-Western Australia,Chest pain,2019-20,25.693231
-Tasmania,Chest pain,2019-20,23.570126
-Northern Territory,Chest pain,2019-20,60.533917
-Australian Capital Territory,Chest pain,2019-20,26.508087
-New South Wales,Burns,2018-19,4.7743356
-Victoria,Burns,2018-19,2.6771819
-Queensland,Burns,2018-19,3.5333404
-South Australia,Burns,2018-19,3.3975861
-Western Australia,Burns,2018-19,4.1631636
-Tasmania,Burns,2018-19,4.1643164
-Northern Territory,Burns,2018-19,4.857159
-Australian Capital Territory,Burns,2018-19,2.3788058
-New South Wales,Burns,2019-20,4.303001
-Victoria,Burns,2019-20,2.3344369
-Queensland,Burns,2019-20,3.0232334
-South Australia,Burns,2019-20,5.2491012
-Western Australia,Burns,2019-20,4.8413062
-Tasmania,Burns,2019-20,3.9283543
-Northern Territory,Burns,2019-20,5.6877506
-Australian Capital Territory,Burns,2019-20,3.049603
+New South Wales,Respiratiry Conditions,2018-19,42.74
+Victoria,Respiratiry Conditions,2018-19,31.65
+Queensland,Respiratiry Conditions,2018-19,39.96
+South Australia,Respiratiry Conditions,2018-19,31.96
+Western Australia,Respiratiry Conditions,2018-19,42.17
+Tasmania,Respiratiry Conditions,2018-19,38.61
+Northern Territory,Respiratiry Conditions,2018-19,144.10
+Australian Capital Territory,Respiratiry Conditions,2018-19,40.20
+New South Wales,Respiratiry Conditions,2019-20,52.04
+Victoria,Respiratiry Conditions,2019-20,35.27
+Queensland,Respiratiry Conditions,2019-20,38.91
+South Australia,Respiratiry Conditions,2019-20,41.71
+Western Australia,Respiratiry Conditions,2019-20,41.55
+Tasmania,Respiratiry Conditions,2019-20,44.52
+Northern Territory,Respiratiry Conditions,2019-20,134.47
+Australian Capital Territory,Respiratiry Conditions,2019-20,45.74
+New South Wales,Asthma,2018-19,4.76
+Victoria,Asthma,2018-19,4.07
+Queensland,Asthma,2018-19,2.87
+South Australia,Asthma,2018-19,4.55
+Western Australia,Asthma,2018-19,3.55
+Tasmania,Asthma,2018-19,2.46
+Northern Territory,Asthma,2018-19,8.10
+Australian Capital Territory,Asthma,2018-19,5.00
+New South Wales,Asthma,2019-20,7.00
+Victoria,Asthma,2019-20,5.68
+Queensland,Asthma,2019-20,3.14
+South Australia,Asthma,2019-20,4.28
+Western Australia,Asthma,2019-20,3.85
+Tasmania,Asthma,2019-20,6.17
+Northern Territory,Asthma,2019-20,9.75
+Australian Capital Territory,Asthma,2019-20,10.09
+New South Wales,Breathing abnormalities,2018-19,8.10
+Victoria,Breathing abnormalities,2018-19,5.59
+Queensland,Breathing abnormalities,2018-19,3.77
+South Australia,Breathing abnormalities,2018-19,3.80
+Western Australia,Breathing abnormalities,2018-19,4.66
+Tasmania,Breathing abnormalities,2018-19,2.65
+Northern Territory,Breathing abnormalities,2018-19,7.29
+Australian Capital Territory,Breathing abnormalities,2018-19,3.09
+New South Wales,Breathing abnormalities,2019-20,9.34
+Victoria,Breathing abnormalities,2019-20,5.85
+Queensland,Breathing abnormalities,2019-20,4.40
+South Australia,Breathing abnormalities,2019-20,4.17
+Western Australia,Breathing abnormalities,2019-20,4.99
+Tasmania,Breathing abnormalities,2019-20,2.43
+Northern Territory,Breathing abnormalities,2019-20,12.19
+Australian Capital Territory,Breathing abnormalities,2019-20,3.05
+New South Wales,Chest pain,2018-19,30.04
+Victoria,Chest pain,2018-19,25.18
+Queensland,Chest pain,2018-19,17.19
+South Australia,Chest pain,2018-19,27.18
+Western Australia,Chest pain,2018-19,23.17
+Tasmania,Chest pain,2018-19,25.36
+Northern Territory,Chest pain,2018-19,51.00
+Australian Capital Territory,Chest pain,2018-19,33.78
+New South Wales,Chest pain,2019-20,27.61
+Victoria,Chest pain,2019-20,24.30
+Queensland,Chest pain,2019-20,20.77
+South Australia,Chest pain,2019-20,24.13
+Western Australia,Chest pain,2019-20,25.69
+Tasmania,Chest pain,2019-20,23.57
+Northern Territory,Chest pain,2019-20,60.53
+Australian Capital Territory,Chest pain,2019-20,26.51
+New South Wales,Burns,2018-19,4.77
+Victoria,Burns,2018-19,2.68
+Queensland,Burns,2018-19,3.53
+South Australia,Burns,2018-19,3.40
+Western Australia,Burns,2018-19,4.16
+Tasmania,Burns,2018-19,4.16
+Northern Territory,Burns,2018-19,4.86
+Australian Capital Territory,Burns,2018-19,2.38
+New South Wales,Burns,2019-20,4.30
+Victoria,Burns,2019-20,2.33
+Queensland,Burns,2019-20,3.02
+South Australia,Burns,2019-20,5.25
+Western Australia,Burns,2019-20,4.84
+Tasmania,Burns,2019-20,3.93
+Northern Territory,Burns,2019-20,5.69
+Australian Capital Territory,Burns,2019-20,3.05
