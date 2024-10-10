@@ -21,3 +21,9 @@ vegaEmbed("#crude_rate", vg_5).then(function(result) {
     // Access the Vega view instance
     //(https://vega.github.io/vega/docs/api/view/) as result.view
 }).catch(console.error);
+
+var vg_6 = "resp_crude_rate.vg.json";
+vegaEmbed("#resp_crude_rate", vg_6).then(function(result) {
+    // Access the Vega view instance
+    //(https://vega.github.io/vega/docs/api/view/) as result.view
+}).catch(console.error);

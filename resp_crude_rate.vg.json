@@ -1,0 +1,66 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "width": 600,
+    "height": 400,
+    "title": "Comparison of crude rate for emergency department visits for respiratory conditions during bushfire season",
+    "data": {
+      "url": "https://raw.githubusercontent.com/disha-shah12/FIT3179/refs/heads/main/resp_crude_rate.csv"
+      },
+    "params":[
+      {
+        "name":"state_selection",
+        "bind":{
+          "input":"select",
+          "options":[
+            "New South Wales",
+            "Victoria",
+            "Queensland",
+            "Australian Capital Territory",
+            "South Australia",
+            "Western Australia",
+            "Tasmania",
+            "Northern Territory"
+          ],
+          "labels":[
+            "New South Wales",
+            "Victoria",
+            "Queensland",
+            "Australian Capital Territory",
+            "South Australia",
+            "Western Australia",
+            "Tasmania",
+            "Northern Territory"
+          ],
+          "name": "State:"
+        },
+        "value":"New South Wales"
+      }
+    ],
+    "transform":[
+      {
+        "filter": "datum.State == state_selection"
+      }
+    ],
+    "mark":"line",
+    "encoding": {
+      "x":{
+        "field":"Date",
+        "type": "temporal",
+        "timeUnit":"yearmonthdate",
+        "title": "Date",
+        "axis": {
+          "format": "%b %Y", "tickCount":6
+        }
+      },
+      "y":{
+        "field":"crude_rate",
+        "type":"quantitative",
+        "title": "Crude Rate (per 100,000 people)"
+      },
+      "tooltip":[
+        {"field": "Date", "type": "temporal", "title": "Date"},
+        {"field": "State","type": "nominal","title": "State"},
+        {"field": "crude_rate", "type":"quantitative", "title":"Crude Rate"}
+      ]
+    }
+  }
