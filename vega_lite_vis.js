@@ -27,3 +27,9 @@ vegaEmbed("#resp_crude_rate", vg_6).then(function(result) {
     // Access the Vega view instance
     //(https://vega.github.io/vega/docs/api/view/) as result.view
 }).catch(console.error);
+
+var vg_7 = "rainfall_temp_combined.vg.json";
+vegaEmbed("#rainfall_temp_combined", vg_7).then(function(result) {
+    // Access the Vega view instance
+    //(https://vega.github.io/vega/docs/api/view/) as result.view
+}).catch(console.error);
