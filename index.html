@@ -12,17 +12,111 @@
 
     <script src="vega_lite_vis.js"></script>
 
-    <title>2019-20 Australian Bushfires</title>
+    <title>Australian Bushfires: 2019-20 Season</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Roboto&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/purecss@3.0.0/build/pure-min.css" integrity="sha384-X38yfunGUhNzHpBaEBsWLO+A0HDYOQi8ufWDkZ0k9e0eXz/tH3II7uKZ9msv++Ls" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/purecss@3.0.0/build/grids-responsive-min.css" />
 </head>
 
 <body>
-    <h1>2019-20 Australian Bushfires</h1>
-    <div id="area_burn_map"></div>
-    <div id="temp_change"></div>
-    <div id="avg_rainfall"></div>
-    <div id="crude_rate"></div>
-    <div id="resp_crude_rate"></div>
-    <div id="rainfall_temp_combined"></div>
+    <h1 id="title">Australian Bushfires: 2019-20 Season</h1>
+
+<div class="pure-g">
+    <div class="pure-u-3-5">
+        <div id="intro">
+                <p><br/>The bushfires that occured during the summer of 2019-2020 are one of the worst that the country has experienced. 
+                    The 2019-20 bushfire season was intense due to a range of factors that include; dry conditions, a lack of soil moisture and dry lightning strikes.
+                    All parts of the country were impacted by these bushfires, however, New South Wales and Victoria suffered the most. New South Wales had at least one fire
+                    running from July 2019 to March 2020, when the last fire was put out. Efforts of the CFA and other volunteer firefighters are to be remembered from the time.
+                    This visualisation explores some causes and impacts of the 2019-20 bushfire season.
+                </p>
+        </div>
+    </div>
+    <div class="pure-u-2-5">
+            <img src="../images/fire_pic.jpg"/>
+    </div>
+
+    <div class="pure-u-3-5">
+        <h2>Percentage of land area burned</h2>
+        <div id="area_burn_map"></div>
+    </div>
+    <div class="pure-u-2-5">
+        <div id="map_explanation">
+            <p><br/><br/><br/>The 2019-20 fires are estimated to have burned 24.3 million hectares of land in Australia. The map on the left provides a representation
+                of the impacted regions, and the percentage of land burned in each LGA. The most affected LGA was Eurobodalla in New South Wales, where 80.8% 
+                of the land was burned. Majority of the fires that occured were around the border of Victoria and New South Wales. Other highly impacted LGAs
+                include Hawkesbury, Shoalhaven and East Gippsland. Dry lightning strikes in East Gippsland caused some fires to start, which then burned for months. 
+            </p>
+        </div>
+    </div>
+
+    <div class="pure-u-1-2">
+        <h2>Temperature Change in Australia (from 1961-90 average)</h2>
+        <div id="temp_change"></div>
+    </div>
+    <div class="pure-u-1-2">
+        <h2>Annual Rainfall in Australia</h2>
+        <div id="avg_rainfall"></div>
+    </div>
+
+    <div class="pure-u-1-2">
+        <h2>Impact of weather conditions on bushfires</h2>
+        <div id="weather_explanation">
+            <p> The climate conditions during 2019 increased the severity of the 2019-20 bushfires. Comparing temperature changes to 1961-90 averages, the 2019 
+                temperature increase is the highest on record. It was 1.52°C higher than the average. The nation also experienced several heatwaves over the summer. 
+                <br/><br/>In 2019, Australia had an annual rainfall of 228.4mm. The heat and low rainfall earned 2019 the title of Australia's driest year on record.
+                These conditions made the bushfires difficult to control, causing them to burn for longer.
+                <br/><br/>For more information visit: http://www.bom.gov.au/climate/current/annual/aus/2019/
+            </p>
+        </div>
+    </div>
+    <div class="pure-u-1-2">
+        <h2>Impact of temperature and rainfall on bushfire conditions</h2>
+        <div id="rainfall_temp_combined"></div>
+    </div>
+
+    <div class="pure-u-1">
+        <h2>Health impacts of bushfires</h2>
+        <div id="health_impacts">
+            <p>
+                Data shows that there is a clear link between increased bushfire activity and people seeking assistance for their health.
+                The most common reasons for an emergency department visit during bushfire season are asthma, breathing abnormalities, burns, chest pain and respiratory conditions.
+                The crude rate of emergency deparment visits for these health conditions has been compared in the bar chart below. The crude rate of the 2019-20 bushfire
+                season has been compared with the 2018-19 season, to accurately show the impacts of the 2019-20 season.
+                Respiratory conditions have the highest crude rate, which is likely to be caused by bushfire smoke, and poor air quality.
+            </p>
+        </div>
+    </div>
+
+    <div class="pure-u-1">
+        <div id="crude_rate"></div>
+    </div>
+    <div class="pure-u-1">
+        <h2>Summary</h2>
+        <div id="summary">
+            <p>
+                Overall, weather conditions played a large role in the cause of the 2019-20 bushfires. The health impacts caused by the 2019-20 bushfires were clearly significant.
+                Despite the negative impacts, hopefully the 2019-20 bushfire season taught the nation how to be bushfire safe, and bushfire ready for any future ones to come.
+            </p>
+        </div>
+    </div>
+
+    <div class="pure-u-1">
+        <div id="metadata">
+            <p>
+                Disha Shah, Published 13 Oct 2024<br/>
+                Sources: https://www.aihw.gov.au/ & https://soe.dcceew.gov.au/
+            </p>
+        </div>
+    </div>
+
+</div>
     
 </body>
 

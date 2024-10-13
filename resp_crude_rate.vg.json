@@ -1,8 +1,8 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "width": 600,
-    "height": 400,
-    "title": "Comparison of crude rate for emergency department visits for respiratory conditions during bushfire season",
+    "width": 450,
+    "height": 300,
+    "background":"transparent",
     "data": {
       "url": "https://raw.githubusercontent.com/disha-shah12/FIT3179/refs/heads/main/resp_crude_rate.csv"
       },
@@ -41,7 +41,10 @@
         "filter": "datum.State == state_selection"
       }
     ],
-    "mark":"line",
+    "mark":{
+        "type":"line",
+        "color":"darkblue"
+    },
     "encoding": {
       "x":{
         "field":"Date",
@@ -49,13 +52,16 @@
         "timeUnit":"yearmonthdate",
         "title": "Date",
         "axis": {
-          "format": "%b %Y", "tickCount":6
+          "format": "%b %Y", "tickCount":6, "titleFont":"Roboto", "titleFontSize":12
         }
       },
       "y":{
         "field":"crude_rate",
         "type":"quantitative",
-        "title": "Crude Rate (per 100,000 people)"
+        "title": "Crude Rate (per 100,000 people)",
+        "axis":{
+            "titleFont":"Roboto","titleFontSize":12
+        }
       },
       "tooltip":[
         {"field": "Date", "type": "temporal", "title": "Date"},

@@ -1,42 +1,88 @@
 {
-    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "width": 600,
-    "height": 400,
-    "title": "Bushfire Conditions",
-    "data": {
-      "url": "https://raw.githubusercontent.com/disha-shah12/FIT3179/refs/heads/main/rainfall_temp_combined.csv"
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": 480,
+  "height": 300,
+  "background": "transparent",
+  "data": {
+    "url": "https://raw.githubusercontent.com/disha-shah12/FIT3179/refs/heads/main/rainfall_temp_combined.csv"
+  },
+  "layer": [
+    {
+      "mark": {
+        "type": "circle",
+        "size": 200
       },
-    "mark":{
-      "type":"circle",
-      "size":200
-    },
-    "encoding": {
-      "x":{
-        "field":"Rainfall",
-        "type": "quantitative",
-        "scale":{
-          "reverse":true
-        },
-        "title":"Rainfall (mm)"
-      },
-      "y":{
-        "field":"temp_diff",
-        "type":"quantitative",
-        "title":"Temperature Change (°C)"
-      },
-          "color": {
-      "condition": [{
-        "test": "datum.Year === '2019'",
-        "value": "red"
-      },
-      {"test":"datum.Year === '2009'",
-      "value":"darkorange"}],
-      "value": "steelblue"
+      "encoding": {
+        "x": {
+          "field": "Rainfall",
+          "type": "quantitative",
+          "scale": {
+            "reverse": true
           },
-      "tooltip":[
-        {"field":"Year", "type":"quantitative"},
-        {"field": "Rainfall", "type": "quantitative", "title": "Rainfall (mm)"},
-        {"field": "temp_diff","type": "quantitative","title": "Temperature Change (°C)"}
-      ]
+          "title": "Negative Rainfall (mm)",
+          "axis": { "titleFont": "Roboto", "titleFontSize": 12 }
+        },
+        "y": {
+          "field": "temp_diff",
+          "type": "quantitative",
+          "title": "Temperature Change (°C)",
+          "axis": { "titleFont": "Roboto", "titleFontSize": 12 }
+        },
+        "color": {
+          "condition": [
+            {
+              "test": "datum.Year === '2019'",
+              "value": "red"
+            },
+            {
+              "test": "datum.Year === '2009'",
+              "value": "darkorange"
+            }
+          ],
+          "value": "steelblue"
+        },
+        "tooltip": [
+          { "field": "Year", "type": "quantitative" },
+          { "field": "Rainfall", "type": "quantitative", "title": "Rainfall (mm)" },
+          { "field": "temp_diff", "type": "quantitative", "title": "Temperature Change (°C)" }
+        ]
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "align": "left", 
+        "baseline": "middle",
+        "dx": 8,  
+        "dy": 0, 
+        "fontSize": 13,
+        "font": "Roboto"
+      },
+      "encoding": {
+        "x": {
+          "field": "Rainfall",
+          "type": "quantitative",
+          "scale": {
+            "reverse": true
+          }
+        },
+        "y": {
+          "field": "temp_diff",
+          "type": "quantitative"
+        },
+        "text": {
+          "field": "Year",
+          "type": "nominal"
+        },
+        "color": { "value": "black" },
+        "opacity": {
+          "condition": {
+            "test": "datum.Year === '2019' || datum.Year === '2009'",
+            "value": 1
+          },
+          "value": 0
+        }
+      }
     }
-  }
+  ]
+}

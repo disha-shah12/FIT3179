@@ -1,8 +1,8 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "width": 600,
-    "height": 400,
-    "title": "Annual Rainfall in Australia",
+    "width": 480,
+    "height": 300,
+    "background":"transparent",
     "data": {
       "url": "https://raw.githubusercontent.com/disha-shah12/FIT3179/refs/heads/main/annual_rainfall_aus.csv"
       },
@@ -14,12 +14,13 @@
         "field":"Year",
         "type":"temporal",
         "title": "Year",
-        "axis": {"tickCount": 10}
+        "axis": {"tickCount": 10, "titleFont":"Roboto", "titleFontSize":12}
       },
       "y":{
         "field":"Rainfall",
         "type":"quantitative",
-        "title": "Annual Rainfall (mm)"
+        "title": "Annual Rainfall (mm)",
+        "axis": {"titleFont":"Roboto", "titleFontSize":12, "gridColor":"darkgray"}
       },
       "tooltip":[
         {"field": "Year", "type": "temporal", "title": "Year", "format":"%Y"},

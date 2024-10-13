@@ -1,8 +1,8 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "width": 620,
+  "width": 610,
   "height": 420,
-  "title": "Percentage of area burned during 2019-20 bushfires",
+  "background":"transparent",
   "projection": {"type": "mercator", 
   "scale":{"expr":"zoom_level"},
   "center": {"expr": "center_to"}},
@@ -38,15 +38,17 @@
         "url": "https://raw.githubusercontent.com/disha-shah12/FIT3179/refs/heads/main/LGA_2021_AUST_GDA2020.json",
         "format": {"type": "topojson", "feature": "LGA_2021_AUST_GDA2020"}
       },
-      "mark": {"type": "geoshape", "fill": "lightgray", "stroke": "white"},
+      "transform":[        
+        {
+        "calculate":"'Data is not available in ' + datum.properties.LGA_NAME21",
+        "as":"note"
+      }],
+      "mark": {"type": "geoshape", "fill": "darkgray", "stroke": "black"},
       "encoding": {
-        "tooltip": [
+        "tooltip": 
           {
-            "field": "properties.LGA_NAME21",
-            "type": "nominal",
-            "title": "LGA"
+            "field": "note"
           }
-        ]
       }
     },
     {

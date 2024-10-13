@@ -1,78 +1,142 @@
 {
-    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "width": 600,
-    "height": 400,
-    "title": "Comparison of crude rate for emergency department visits during bushfire seasons ",
-    "data": {
-      "url": "https://raw.githubusercontent.com/disha-shah12/FIT3179/refs/heads/main/crude_rate.csv"
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "background":"transparent",
+  "params": [
+    {
+      "name": "state_selection",
+      "bind": {
+        "input": "select",
+        "options": [
+          "New South Wales",
+          "Victoria",
+          "Queensland",
+          "Australian Capital Territory",
+          "South Australia",
+          "Western Australia",
+          "Tasmania",
+          "Northern Territory"
+        ],
+        "labels": [
+          "New South Wales",
+          "Victoria",
+          "Queensland",
+          "Australian Capital Territory",
+          "South Australia",
+          "Western Australia",
+          "Tasmania",
+          "Northern Territory"
+        ],
+        "name": "State:"
       },
-    "params":[
-      {
-        "name":"state_selection",
-        "bind":{
-          "input":"select",
-          "options":[
-            "New South Wales",
-            "Victoria",
-            "Queensland",
-            "Australian Capital Territory",
-            "South Australia",
-            "Western Australia",
-            "Tasmania",
-            "Northern Territory"
-          ],
-          "labels":[
-            "New South Wales",
-            "Victoria",
-            "Queensland",
-            "Australian Capital Territory",
-            "South Australia",
-            "Western Australia",
-            "Tasmania",
-            "Northern Territory"
-          ],
-          "name": "State:"
-        },
-        "value":"New South Wales"
-      }
-    ],
-    "transform":[
-      {
-        "filter": "datum.State == state_selection"
-      }
-    ],
-    "encoding": {
-      "x":{
-        "field":"principal_diagnosis",
-        "type":"nominal",
-        "title": "Health Condition",
-        "axis":{"labelAngle":0}
+      "value": "New South Wales"
+    }
+  ],
+  "hconcat": [
+    {
+      "width": 450,
+      "height": 300,
+      "title":{"text":"Crude rate for emergency department visits during bushfire seasons", "font":"Roboto", "fontSize":18},
+      "data": {
+        "url": "https://raw.githubusercontent.com/disha-shah12/FIT3179/refs/heads/main/crude_rate.csv"
       },
-      "y":{
-        "field":"crude_rate",
-        "type":"quantitative",
-        "title": "Crude Rate (per 100,000 people)"
-      },
-      "color":{
-        "field": "Year",
-        "type": "nominal",
-        "legend": {
-          "title":"Bushfire Season"
+      "transform": [
+        {
+          "filter": "datum.State == state_selection"
         }
+      ],
+      "encoding": {
+        "x": {
+          "field": "principal_diagnosis",
+          "type": "nominal",
+          "title": "Health Condition",
+          "axis": {
+            "labelAngle": 0,
+            "titleFont": "Roboto",
+            "titleFontSize": 12, 
+            "grid":false
+          }
+        },
+        "y": {
+          "field": "crude_rate",
+          "type": "quantitative",
+          "title": "Crude Rate (per 100,000 people)",
+          "axis": {
+            "titleFont": "Roboto",
+            "titleFontSize": 12,
+            "gridColor":"darkgray"
+          }
+        },
+        "color": {
+          "field": "Year",
+          "type": "nominal",
+          "legend": {
+            "title": "Bushfire Season"
+          },
+          "scale": {
+            "range": ["orange", "darkblue"]
+          }
+        },
+        "xOffset": {
+          "field": "Year"
+        },
+        "tooltip": [
+          { "field": "principal_diagnosis", "type": "nominal", "title": "Health Condition" },
+          { "field": "Year", "type": "nominal", "title": "Bushfire Season" },
+          { "field": "crude_rate", "type": "quantitative", "title": "Crude Rate" }
+        ]
       },
-      "xOffset": {
-        "field":"Year"
-      },
-      "tooltip":[
-        {"field": "principal_diagnosis", "type": "nominal", "title": "Health Condition"},
-        {"field": "Year","type": "nominal","title": "Bushfire Season"},
-        {"field": "crude_rate", "type":"quantitative", "title":"Crude Rate"}
+      "layer": [
+        {
+          "mark": "bar"
+        }
       ]
     },
-    "layer":[
-      {
-        "mark":"bar"
+    {
+      "width": 450,
+      "height": 300,
+      "title":{"text":"Respiratory conditions crude rate 2019-20", "font":"Roboto", "fontSize":18},
+      "data": {
+        "url": "https://raw.githubusercontent.com/disha-shah12/FIT3179/refs/heads/main/resp_crude_rate.csv"
+      },
+      "transform": [
+        {
+          "filter": "datum.State == state_selection"
+        }
+      ],
+      "mark": {
+        "type": "line",
+        "color": "darkblue"
+      },
+      "encoding": {
+        "x": {
+          "field": "Date",
+          "type": "temporal",
+          "timeUnit": "yearmonthdate",
+          "title": "Date",
+          "axis": {
+            "format": "%b %Y",
+            "tickCount": 6,
+            "titleFont": "Roboto",
+            "titleFontSize": 12
+          }
+        },
+        "y": {
+          "field": "crude_rate",
+          "type": "quantitative",
+          "title": "Crude Rate (per 100,000 people)",
+          "axis": {
+            "titleFont": "Roboto",
+            "titleFontSize": 12,
+            "gridColor":"darkgray"
+          }
+        },
+        "tooltip": [
+          { "field": "Date", "type": "temporal", "title": "Date" },
+          { "field": "State", "type": "nominal", "title": "State" },
+          { "field": "crude_rate", "type": "quantitative", "title": "Crude Rate" }
+        ]
       }
-    ]
-  }
-  
+    }
+
+  ]
+}

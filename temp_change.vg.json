@@ -1,8 +1,8 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "width": 600,
-    "height": 400,
-    "title": "Temperature Change in Australia (from 1961-90 average)",
+    "width": 480,
+    "height": 300,
+    "background":"transparent",
     "data": {
       "url": "https://raw.githubusercontent.com/disha-shah12/FIT3179/refs/heads/main/annual_temp_difference_aus.csv"
       },
@@ -14,12 +14,13 @@
         "field":"Year",
         "type":"temporal",
         "title": "Year",
-        "axis": {"tickCount": 10}
+        "axis": {"tickCount": 10, "titleFont":"Roboto", "titleFontSize":12}
       },
       "y":{
         "field":"temp_diff",
         "type":"quantitative",
-        "title": "Temperature Difference (°C)"
+        "title": "Temperature Difference (°C)",
+        "axis": {"titleFont":"Roboto", "titleFontSize":12}
       },
       "color":{
         "condition":{
@@ -47,7 +48,7 @@
             "axis": {"tickCount": 10}
           },
           "y":{
-            "field":"11_year_mean", "type":"quantitative"
+            "field":"11_year_mean", "type":"quantitative", "axis":{"gridColor":"darkgray"}
           },
           "tooltip":[
             {"field": "Year", "type": "temporal", "title": "Year", "format":"%Y"},
@@ -58,18 +59,17 @@
         {
         "mark":{
           "type": "text",
-          "align": "right",
-          "baseline": "top",
           "dx": -5,
-          "fontSize": 12
+          "fontSize": 13,
+          "font":"Roboto"
         },
         "encoding":{
-          "text":{"value":"2019 was Australia's hottest year on record, \n 1.52°C above the 1961-1990 average"},
+          "text":{"value":"2019 was Australia's hottest year on record"},
           "x":{
-            "value":575
+            "value":330
           },
           "y":{
-            "value":10
+            "value":20
           },
           "color":{"value":"gray"}
         }
